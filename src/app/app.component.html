@@ -1,0 +1,30 @@
+<div
+  class="main mt-5"
+  style="
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  "
+>
+  <div
+    class="card bg-dark p-2 m-2"
+    style="
+      display: flex;
+      flex-direction: column;
+      width: 15vw;
+      height: 40vh;
+      justify-content: space-around;
+      align-items: center;
+    "
+    *ngFor="let k of flops$ | async" 
+    >
+    <!--  this is how we use async pipe  -->
+    <!-- using async here is the best way of binding the data -->
+    <!-- <img style="height: 25vh; width: 12vw;" src="{{flop.imageUrl
+  }}" alt=""> -->
+    <h3 style="color: #fff">{{ k.title }}</h3>
+    <button class="btn btn-success" style="display: inline">rent</button>
+  </div>
+</div>
